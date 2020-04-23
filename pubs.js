@@ -27,7 +27,7 @@ $.get('peerreviewed.tsv', function(data) {
 			// set altmetric
 			var doialtmet = null;
 			if(columns[8] != "") {
-				doialtmet = " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a>."; // doi
+				doialtmet = " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a>.</small>"; // doi
 				
 				if(columns[2] > 2013) {
 					doialtmet += " <div class='altmetric-embed' data-badge-type='1' data-badge-popover='right' data-doi='" + columns[8] + "' data-link-target='_blank' style='display: inline-block; vertical-align: middle;'></div>";
@@ -65,6 +65,10 @@ $.get('peerreviewed.tsv', function(data) {
 			// add doi and altmetric
 			html += doialtmet;
 			
+			// add note
+			if(columns[15] != "") {
+				html += "<br/><small>" + columns[15];
+			}
 			// close cell	
 			html += "</td>";
 
