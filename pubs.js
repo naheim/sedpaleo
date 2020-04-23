@@ -21,11 +21,12 @@ $.get('peerreviewed.tsv', function(data) {
 			//console.log(columns[jQuery.inArray( "title", colNames )]);
 			
 		} else {
+			var rowNumber = lineCount - i;
 			// start a table row
 			html += "<tr>";
 			
 			// cell with paper count
-			html += "<td class='rownumber'>" + (lineCount - i) + "</td>";
+			html += "<td class='rownumber'>" + rowNumber + "</td>";
 			
 			/*
 			// format citation cell if journal 
