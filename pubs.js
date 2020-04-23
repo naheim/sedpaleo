@@ -101,5 +101,6 @@ $.get('peerreviewed.tsv', function(data) {
 // function for making table row a link
 $('*[data-href]').on("click",function(){
 	window.location = $(this).data('href');
+	console.log($(this).data('href'));
 	return false;
 });
