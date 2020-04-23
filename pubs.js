@@ -36,7 +36,7 @@ $.get('peerreviewed.tsv', function(data) {
 			
 			// start a table row
 			if(columns[16] != "") {
-				html += "<tr onclick=\"document.location = 'reprints/" + columns[16] + "';\""'>";			
+				html += "<tr onclick=\"document.location = 'reprints/" + columns[16] + "';\"'>";			
 			} else {
 				html += "<tr>";
 			}
