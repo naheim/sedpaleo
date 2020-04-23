@@ -21,14 +21,13 @@ $.get('peerreviewed.tsv', function(data) {
 			//console.log(columns[jQuery.inArray( "title", colNames )]);
 			
 		} else {
-			console.log(i);
-			console.log(lineCount - i);
 			// start a table row
 			html += "<tr>";
 			
 			// cell with paper count
 			html += "<td class='rownumber'>" + lineCount - i + "</td>";
 			
+			/*
 			// format citation cell if journal 
 			if(columns[jQuery.inArray( "type", colNames )] == "journal") {
 				html += "<td><strong>" + columns[jQuery.inArray( "title", colNames )] + ".</strong><em> " + columns[jQuery.inArray( "journal", colNames )] + "</em>"; // title and Journal
@@ -41,7 +40,7 @@ $.get('peerreviewed.tsv', function(data) {
 					html += "<div class='altmetric-embed' data-badge-type='1' data-badge-popover='right' data-doi='" + columns[jQuery.inArray( "doi", colNames )] + "' data-link-target='_blank' style='display: inline-block; vertical-align: middle;'></div>";
 				}	
 			}
-			
+			*/
 			// close cell	
 			html += "</td>";
 
