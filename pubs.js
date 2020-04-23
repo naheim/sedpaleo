@@ -18,7 +18,8 @@ $.get('peerreviewed.tsv', function(data) {
 		
 		if(columns[0] == "type") {
 			var colNames = columns;
-			console.log(colNames)
+			console.log(inArray( "title", columns ))
+			
 		} else {
 			// start a table row
 			html += "<tr>";
