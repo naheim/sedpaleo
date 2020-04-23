@@ -1,9 +1,9 @@
 $('*[data-href]').on("click",function(){
-  window.location = $(this).data('href');
-  return false;
+	window.location = $(this).data('href');
+	return false;
 });
 $("td > a").on("click",function(e){
-  e.stopPropagation();
+	e.stopPropagation();
 });
 
 
@@ -45,9 +45,9 @@ $.get('peerreviewed.tsv', function(data) {
 			
 			// start a table row
 			if(columns[16] != "") {
-				html += "<tr data-href='reprints/" + columns[16] + "'>";
-				console.log("<tr data-href='reprints/" + columns[16] + "'>");
-				console.log("b");			
+				html += "<tr data-href=\"reprints/" + columns[16] + "\">";
+				console.log("<tr data-href=\"reprints/" + columns[16] + "\">");
+				console.log("c");			
 			} else {
 				html += "<tr>";
 			}
