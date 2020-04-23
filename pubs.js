@@ -16,13 +16,14 @@ $.get('peerreviewed.tsv', function(data) {
 		// split line into columns
 		var columns = ourrow.split("\t");
 		
-		var colNames;
-		if(columns[0] == "type") {
-			colNames = columns;
-			//console.log(colNames);
-			
-		} else {
+		if(columns[0] != "type") {
+			// column indices
+			// type=0; authors=1; year=2; title=3; journal=4; volume=5; issue=6; pages=7; doi=8; booktitle=9 
+			// editors=10; publisher=11; pubplace=12; url=13; notyetpub=14; note=15 
+
+			// set up publication counter
 			var rowNumber = lineCount - i;
+			
 			// start a table row
 			html += "<tr>";
 			
@@ -30,19 +31,15 @@ $.get('peerreviewed.tsv', function(data) {
 			html += "<td class='rownumber'>" + rowNumber + "</td>";
 			
 			// format citation cell if journal 
-			
-			console.log(colNames);
-			console.log(  jQuery.inArray( "type", colNames ) );
-			
-			if(columns[jQuery.inArray( "type", colNames )] == "journal") {
-				html += "<td><strong>" + columns[jQuery.inArray( "title", colNames )] + ".</strong><em> " + columns[jQuery.inArray( "journal", colNames )] + "</em>"; // title and Journal
-				if(columns[jQuery.inArray( "notyetpub", colNames )] != "") {
-					html += columns[jQuery.inArray( "notyetpub", colNames )]; // in press etc. 	
+			if(columns[0] == "journal") {
+				html += "<td><strong>" + columns[3] + ".</strong><em> " + columns[4] + "</em>"; // title and Journal
+				if(columns[14] != "") {
+					html += columns[14]; // in press etc. 	
 				}
-				html += ".<br/><small>" + columns[jQuery.inArray( "authors", colNames )] + ". " + columns[jQuery.inArray( "year", colNames )] + "."; // author and year
-				if(columns[jQuery.inArray( "doi", colNames )] != "") {
-					html += " <a href='http://doi.org/" + columns[jQuery.inArray( "doi", colNames )] + "' target='blank'>doi:" + columns[jQuery.inArray( "doi", colNames )] + "</a>."; // doi
-					html += "<div class='altmetric-embed' data-badge-type='1' data-badge-popover='right' data-doi='" + columns[jQuery.inArray( "doi", colNames )] + "' data-link-target='_blank' style='display: inline-block; vertical-align: middle;'></div>";
+				html += ".<br/><small>" + columns[1] + ". " + columns[2] + "."; // author and year
+				if(columns[8] != "") {
+					html += " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a>."; // doi
+					html += "<div class='altmetric-embed' data-badge-type='1' data-badge-popover='right' data-doi='" + columns[8] + "' data-link-target='_blank' style='display: inline-block; vertical-align: middle;'></div>";
 				}	
 			}
 			
