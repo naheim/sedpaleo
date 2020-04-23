@@ -16,7 +16,7 @@ $.get('peerreviewed.tsv', function(data) {
 		// split line into columns
 		var columns = ourrow.split("\t");
 		
-		if(columns[0] != "peer-review") {
+		if(columns[0] == "peer-review") {
 			// start a table row
 			html += "<tr>";
 
