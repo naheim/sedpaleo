@@ -1,0 +1,8 @@
+/*ADDITIONS FOR ADDING TUFTS BLUE */
+.w3-azure,.w3-hover-azure:hover{color:#fff!important;background-color:#3E8EDE!important}
+.w3-text-azure,.w3-hover-text-azure:hover{color:#3E8EDE!important}
+.w3-border-azure,.w3-hover-border-azure:hover{border-color:#3E8EDE!important}
+
+/*FOR NUMBERS IN PUBLICATIONS */
+.rownumber {font-size: .85em;}
+
