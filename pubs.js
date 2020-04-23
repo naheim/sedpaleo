@@ -47,7 +47,7 @@ $.get('peerreviewed.tsv', function(data) {
 			if(columns[16] != "") {
 				html += "<tr data-href=\"reprints/" + columns[16] + "\">";
 				console.log("<tr data-href=\"reprints/" + columns[16] + "\">");
-				console.log("c");			
+				console.log(columns[16]);			
 			} else {
 				html += "<tr>";
 			}
