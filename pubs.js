@@ -38,7 +38,7 @@ $.get('peerreviewed.tsv', function(data) {
 				}
 				html += ".<br/><small>" + columns[1] + ". " + columns[2] + "."; // author and year
 				if(columns[8] != "") {
-					html += " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a>."; // doi
+					html += " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a>. "; // doi
 					html += "<div class='altmetric-embed' data-badge-type='1' data-badge-popover='right' data-doi='" + columns[8] + "' data-link-target='_blank' style='display: inline-block; vertical-align: middle;'></div>";
 				}	
 			}
