@@ -16,8 +16,9 @@ $.get('peerreviewed.tsv', function(data) {
 		// split line into columns
 		var columns = ourrow.split("\t");
 		
+		var colNames;
 		if(columns[0] == "type") {
-			var colNames = columns;
+			colNames = columns;
 			//console.log(colNames);
 			
 		} else {
