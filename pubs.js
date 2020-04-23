@@ -37,7 +37,8 @@ $.get('peerreviewed.tsv', function(data) {
 			// start a table row
 			if(columns[16] != "") {
 				html += "<tr onclick=\"document.location = 'reprints/" + columns[16] + "';\">";
-				console.log("<tr onclick=\"document.location = 'reprints/" + columns[16] + "';\">");			
+				console.log("<tr onclick=\"document.location = 'reprints/" + columns[16] + "';\">");
+				console.log("A");			
 			} else {
 				html += "<tr>";
 			}
@@ -85,8 +86,6 @@ $.get('peerreviewed.tsv', function(data) {
 
 	// insert into div
 	$('#publications').append(html);
-	var dt = new Date();
-	console.log(dt);
 });
 
 
