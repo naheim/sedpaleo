@@ -34,15 +34,15 @@ $.get('peerreviewed.tsv', function(data) {
 				}
 			}
 			
-			/*/ start a table row
+			// start a table row
 			if(columns[16] != "") {
-				html += "<tr onclick=\"document.location = 'reprints/" + columns[16] + "';\">";
-				console.log("<tr onclick=\"document.location = 'reprints/" + columns[16] + "';\">");
+				html += "<tr data-href='reprints/" + columns[16] + "'>";
+				console.log("<tr data-href='reprints/" + columns[16] + "'>");
 				console.log("A");			
 			} else {
 				html += "<tr>";
 			}
-			*/
+			
 			// cell with paper count
 			html += "<td class='rownumber'>" + rowNumber + "</td>";
 			

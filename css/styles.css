@@ -6,5 +6,5 @@
 /*FOR NUMBERS IN PUBLICATIONS */
 .rownumber {font-size: .85em;}
 
-/*FOR CUSTOM TEXT DECORATION*/
-.underline {text-decoration: underline;}
+/*FOR TABLE ROW LINK TO FILES*/
+*[data-href] {cursor: pointer;}
