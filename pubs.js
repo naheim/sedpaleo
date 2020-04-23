@@ -36,7 +36,7 @@ $.get('peerreviewed.tsv', function(data) {
 				if(columns[6] != "") {
 					vol = columns[5] + "(" + columns[6] + "):" + columns[7];
 				} else if(columns[14] != ""){
-					vol = columns[14];									
+					vol = ". " + columns[14];									
 				} else {
 					vol = columns[5] + ":" + columns[7];					
 				}
