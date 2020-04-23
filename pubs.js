@@ -47,7 +47,7 @@ $.get('peerreviewed.tsv', function(data) {
 				html += "<tr data-href='reprints/" + columns[16] + "'>";
 				console.log("<tr data-href='reprints/" + columns[16] + "'>");
 				console.log(columns[16]);			
-				console.log('aa');			
+				console.log('B');			
 			} else {
 				html += "<tr>";
 			}
@@ -100,6 +100,6 @@ $.get('peerreviewed.tsv', function(data) {
 
 // function for making table row a link
 $('*[data-href]').on("click",function(){
-	window.location = $(this).data('data-href');
+	window.location = $(this).data('href');
 	return false;
 });
