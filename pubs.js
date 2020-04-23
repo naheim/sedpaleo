@@ -28,7 +28,6 @@ $.get('peerreviewed.tsv', function(data) {
 			// cell with paper count
 			html += "<td class='rownumber'>" + rowNumber + "</td>";
 			
-			
 			// format citation cell if journal 
 			if(columns[jQuery.inArray( "type", colNames )] == "journal") {
 				html += "<td><strong>" + columns[jQuery.inArray( "title", colNames )] + ".</strong><em> " + columns[jQuery.inArray( "journal", colNames )] + "</em>"; // title and Journal
