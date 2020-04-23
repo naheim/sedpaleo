@@ -84,6 +84,8 @@ $.get('peerreviewed.tsv', function(data) {
 
 	// insert into div
 	$('#publications').append(html);
+	var dt = new Date();
+	console.log(dt);
 });
 
 
