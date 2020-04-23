@@ -29,7 +29,7 @@ $.get('peerreviewed.tsv', function(data) {
 			html += "<td class='rownumber'>" + rowNumber + "</td>";
 			
 			// format citation cell if journal 
-			console.log(columns[jQuery.inArray( "type", colNames )]);
+			console.log(jQuery.inArray( "type", colNames ));
 			if(columns[jQuery.inArray( "type", colNames )] == "journal") {
 				html += "<td><strong>" + columns[jQuery.inArray( "title", colNames )] + ".</strong><em> " + columns[jQuery.inArray( "journal", colNames )] + "</em>"; // title and Journal
 				if(columns[jQuery.inArray( "notyetpub", colNames )] != "") {
