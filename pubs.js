@@ -19,7 +19,7 @@ $.get('peerreviewed.tsv', function(data) {
 		if(columns[0] != "type") {
 			// column indices
 			// type=0; authors=1; year=2; title=3; journal=4; volume=5; issue=6; pages=7; doi=8; booktitle=9 
-			// editors=10; publisher=11; pubplace=12; url=13; notyetpub=14; note=15 
+			// editors=10; publisher=11; pubplace=12; url=13; notyetpub=14; note=15 ; reprint=16; 
 
 			// set up publication counter
 			var rowNumber = lineCount - i;
@@ -35,8 +35,8 @@ $.get('peerreviewed.tsv', function(data) {
 			}
 			
 			// start a table row
-			if(columns[8] != "") {
-				html += "<tr onclick=\"document.location = 'reprints/Fitch2000Zoology.pdf';\"" + columns[8] + "'>";			
+			if(columns[16] != "") {
+				html += "<tr onclick=\"document.location = 'reprints/" + columns[16] + "';\""'>";			
 			} else {
 				html += "<tr>";
 			}
