@@ -25,7 +25,7 @@ $.get('peerreviewed.tsv', function(data) {
 			var rowNumber = lineCount - i;
 			
 			// set altmetric
-			var doialtmet = null;
+			var doialtmet = "";
 			if(columns[8] != "") {
 				doialtmet = " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a>.</small>"; // doi
 				
