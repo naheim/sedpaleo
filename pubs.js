@@ -24,6 +24,16 @@ $.get('peerreviewed.tsv', function(data) {
 			// set up publication counter
 			var rowNumber = lineCount - i;
 			
+			// set altmetric
+			var doialtmet = null;
+			if(columns[8] != "") {
+				doialtmet = " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a>."; // doi
+				
+				if(columns[2] > 2013) {
+					doialtmet += " <div class='altmetric-embed' data-badge-type='1' data-badge-popover='right' data-doi='" + columns[8] + "' data-link-target='_blank' style='display: inline-block; vertical-align: middle;'></div>";
+				}
+			}
+			
 			// start a table row
 			if(columns[8] != "") {
 				html += "<tr class='clickable-row' data-href='http://doi.org/" + columns[8] + "'>";			
@@ -44,28 +54,16 @@ $.get('peerreviewed.tsv', function(data) {
 				} else {
 					vol = " " + columns[5] + ":" + columns[7];					
 				}
-				
 				html += "<td><strong>" + columns[3] + ".</strong><em> " + columns[4] + "</em>" + vol; // title and Journal/vol/issue/pages
-			
 				html += ".<br/><small>" + columns[1] + ". " + columns[2] + "."; // author and year
-				if(columns[8] != "") {
-					html += " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a>. "; // doi
 					
-					if(columns[2] > 2013) {
-						html += "<div class='altmetric-embed' data-badge-type='1' data-badge-popover='right' data-doi='" + columns[8] + "' data-link-target='_blank' style='display: inline-block; vertical-align: middle;'></div>";
-					}
-				}	
 			} else {
 				html += "<td><strong>" + columns[3] + ".</strong> <em>In</em> " + columns[10] + ". " + columns[9] + ". " + columns[7]; // title and editors and book title
 				html += ".<br/><small>" + columns[1] + ". " + columns[2] + "."; // author and year
-				if(columns[8] != "") {
-					html += " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a>. "; // doi
-					
-					if(columns[2] > 2013) {
-						html += "<div class='altmetric-embed' data-badge-type='1' data-badge-popover='right' data-doi='" + columns[8] + "' data-link-target='_blank' style='display: inline-block; vertical-align: middle;'></div>";
-					}
-				}
 			}
+			
+			// add doi and altmetric
+			html += doialtmet;
 			
 			// close cell	
 			html += "</td>";
