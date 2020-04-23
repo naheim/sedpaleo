@@ -40,7 +40,6 @@ $.get('peerreviewed.tsv', function(data) {
 			var regex2 = /Heim, N.A./gi;
 			authors = authors.replace(regex2, "<span class='w3-azure'>Heim, N.A.</span>");
 			
-			
 			// set altmetric
 			var doialtmet = "";
 			if(columns[8] != "") {
@@ -56,7 +55,7 @@ $.get('peerreviewed.tsv', function(data) {
 				html += "<tr data-href='reprints/" + columns[16] + "'>";
 				console.log("<tr data-href='reprints/" + columns[16] + "'>");
 				console.log(columns[16]);			
-				console.log('b');			
+				console.log('CC');			
 			} else {
 				html += "<tr>";
 			}
@@ -75,11 +74,11 @@ $.get('peerreviewed.tsv', function(data) {
 					vol = " " + columns[5] + ":" + columns[7];					
 				}
 				html += "<td><strong>" + columns[3] + ".</strong><em> " + columns[4] + "</em>" + vol; // title and Journal/vol/issue/pages
-				html += ".<br/><small>" + columns[1] + ". " + columns[2] + "."; // author and year
+				html += ".<br/><small>" + authors + ". " + columns[2] + "."; // author and year
 					
 			} else {
 				html += "<td><strong>" + columns[3] + ".</strong> <em>In</em> " + columns[10] + ". " + columns[9] + ". " + columns[7]; // title and editors and book title
-				html += ".<br/><small>" + columns[1] + ". " + columns[2] + "."; // author and year
+				html += ".<br/><small>" + authors + ". " + columns[2] + "."; // author and year
 			}
 			
 			// add doi and altmetric
