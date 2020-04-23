@@ -21,6 +21,7 @@ $.get('peerreviewed.tsv', function(data) {
 			//console.log(columns[jQuery.inArray( "title", colNames )]);
 			
 		} else {
+			console.log(lineCount);
 			// start a table row
 			html += "<tr>";
 			
