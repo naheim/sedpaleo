@@ -74,6 +74,4 @@ $.get('peerreviewed.tsv', function(data) {
 
 	// insert into div
 	$('#publications').append(html);
-	console.log(html);
-
 });
