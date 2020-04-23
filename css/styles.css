@@ -6,3 +6,5 @@
 /*FOR NUMBERS IN PUBLICATIONS */
 .rownumber {font-size: .85em;}
 
+/*FOR CUSTOM TEXT DECORATION*/
+.underline {text-decoration: underline;}
