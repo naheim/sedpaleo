@@ -36,7 +36,7 @@ $.get('peerreviewed.tsv', function(data) {
 			
 			// start a table row
 			if(columns[8] != "") {
-				html += "<tr class='clickable-row' data-href='http://doi.org/" + columns[8] + "'>";			
+				html += "<tr onclick=\"document.location = 'reprints/Fitch2000Zoology.pdf';\"" + columns[8] + "'>";			
 			} else {
 				html += "<tr>";
 			}
@@ -63,7 +63,7 @@ $.get('peerreviewed.tsv', function(data) {
 			}
 			
 			// add doi and altmetric
-			html += doialtmet + ".</small>";
+			html += doialtmet + "</small>";
 			
 			// add note
 			if(columns[15] != "") {
