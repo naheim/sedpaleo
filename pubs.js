@@ -34,17 +34,15 @@ $.get('peerreviewed.tsv', function(data) {
 			if(columns[0] == "journal") {
 				var vol = null;
 				if(columns[6] != "") {
-					vol = columns[5] + "(" + columns[6] + "):" + columns[7];
+					vol = " " + columns[5] + "(" + columns[6] + "):" + columns[7];
 				} else if(columns[14] != ""){
 					vol = ". " + columns[14];									
 				} else {
-					vol = columns[5] + ":" + columns[7];					
+					vol = " " + columns[5] + ":" + columns[7];					
 				}
 				
-				html += "<td><strong>" + columns[3] + ".</strong><em> " + columns[4] + "</em> " + vol; // title and Journal/vol/issue/pages
-				if(columns[14] != "") {
-					html += columns[14]; // in press etc. 	
-				}
+				html += "<td><strong>" + columns[3] + ".</strong><em> " + columns[4] + "</em>" + vol; // title and Journal/vol/issue/pages
+			
 				html += ".<br/><small>" + columns[1] + ". " + columns[2] + "."; // author and year
 				if(columns[8] != "") {
 					html += " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a>. "; // doi
