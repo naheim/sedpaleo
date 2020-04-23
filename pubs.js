@@ -1,11 +1,3 @@
-
-$('*[data-href]').on("click",function(){
-	window.location = $(this).data('data-href');
-	return false;
-});
-
-
-
 $.get('peerreviewed.tsv', function(data) {
 	$.getScript("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
 
@@ -55,7 +47,7 @@ $.get('peerreviewed.tsv', function(data) {
 				html += "<tr data-href='reprints/" + columns[16] + "'>";
 				console.log("<tr data-href='reprints/" + columns[16] + "'>");
 				console.log(columns[16]);			
-				console.log('d');			
+				console.log('E');			
 			} else {
 				html += "<tr>";
 			}
@@ -107,8 +99,7 @@ $.get('peerreviewed.tsv', function(data) {
 
 
 // function for making table row a link
-jQuery(document).ready(function($) {
-    $(".clickable-row").click(function() {
-        window.location = $(this).data("href");
-    });
+$('*[data-href]').on("click",function(){
+	window.location = $(this).data('href');
+	return false;
 });
