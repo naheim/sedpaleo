@@ -1,7 +1,7 @@
 $.getScript("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
 
 $('*[data-href]').on("click",function(){
-	window.location = $(this).data('href');
+	window.location = $(this).data('data-href');
 	return false;
 });
 $("td > a").on("click",function(e){
@@ -47,10 +47,10 @@ $.get('peerreviewed.tsv', function(data) {
 			
 			// start a table row
 			if($.trim(columns[16]) != "") {
-				html += "<tr data-href=\"/reprints/" + columns[16] + "\">";
-				console.log("<tr href=\"/reprints/" + columns[16] + "\">");
+				html += "<tr data-href='reprints/" + columns[16] + "'>";
+				console.log("<tr data-href='reprints/" + columns[16] + "'>");
 				console.log(columns[16]);			
-				console.log('G');			
+				console.log('A');			
 			} else {
 				html += "<tr>";
 			}
