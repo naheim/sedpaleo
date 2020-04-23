@@ -33,6 +33,14 @@ $.get('peerreviewed.tsv', function(data) {
 			// set up publication counter
 			var rowNumber = lineCount - i;
 			
+			// authors 
+			var authors = columns[1];
+			var regex1 = /N.A. Heim/gi;
+			authors = authors.replace(regex1, "<span class='w3-azure'>N.A. Heim</span>");
+			var regex2 = /Heim, N.A./gi;
+			authors = authors.replace(regex2, "<span class='w3-azure'>Heim, N.A.</span>");
+			
+			
 			// set altmetric
 			var doialtmet = "";
 			if(columns[8] != "") {
