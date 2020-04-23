@@ -25,7 +25,11 @@ $.get('peerreviewed.tsv', function(data) {
 			var rowNumber = lineCount - i;
 			
 			// start a table row
-			html += "<tr>";
+			if(columns[8] != "") {
+				html += "<tr data-href='http://doi.org/" + columns[8] + "'>";			
+			} else {
+				html += "<tr>";
+			}
 			
 			// cell with paper count
 			html += "<td class='rownumber'>" + rowNumber + "</td>";
