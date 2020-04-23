@@ -35,9 +35,12 @@ $.get('peerreviewed.tsv', function(data) {
 				var vol = null;
 				if(columns[6] != "") {
 					vol = columns[5] + "(" + columns[6] + "):" + columns[7];
+				} else if(columns[14] != ""){
+					vol = columns[14];									
 				} else {
 					vol = columns[5] + ":" + columns[7];					
 				}
+				
 				html += "<td><strong>" + columns[3] + ".</strong><em> " + columns[4] + "</em> " + vol; // title and Journal/vol/issue/pages
 				if(columns[14] != "") {
 					html += columns[14]; // in press etc. 	
