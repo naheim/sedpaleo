@@ -55,11 +55,11 @@ $.get('peerreviewed.tsv', function(data) {
 					vol = " " + columns[5] + ":" + columns[7];					
 				}
 				html += "<td><strong>" + columns[3] + ".</strong><em> " + columns[4] + "</em>" + vol; // title and Journal/vol/issue/pages
-				html += ".<br/><small>" + columns[1] + ". " + columns[2] + "."; // author and year
+				html += ".<br/><small>" + columns[1] + ". " + columns[2] + ".</small>"; // author and year
 					
 			} else {
 				html += "<td><strong>" + columns[3] + ".</strong> <em>In</em> " + columns[10] + ". " + columns[9] + ". " + columns[7]; // title and editors and book title
-				html += ".<br/><small>" + columns[1] + ". " + columns[2] + "."; // author and year
+				html += ".<br/><small>" + columns[1] + ". " + columns[2] + ".</small>"; // author and year
 			}
 			
 			// add doi and altmetric
@@ -67,7 +67,7 @@ $.get('peerreviewed.tsv', function(data) {
 			
 			// add note
 			if(columns[15] != "") {
-				html += "<br/><small class='underline'>" + columns[15] + "</small>";
+				html += "<br/><small>" + columns[15] + "</small>";
 			}
 			// close cell	
 			html += "</td>";
