@@ -1,12 +1,10 @@
 $.getScript("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
 
 $('*[data-href]').on("click",function(){
-	window.location = $(this).data('data-href');
+	window.location = $(this).data('href');
 	return false;
 });
-$("td > a").on("click",function(e){
-	e.stopPropagation();
-});
+
 
 
 $.get('peerreviewed.tsv', function(data) {
@@ -50,7 +48,7 @@ $.get('peerreviewed.tsv', function(data) {
 				html += "<tr data-href='reprints/" + columns[16] + "'>";
 				console.log("<tr data-href='reprints/" + columns[16] + "'>");
 				console.log(columns[16]);			
-				console.log('A');			
+				console.log('b');			
 			} else {
 				html += "<tr>";
 			}
