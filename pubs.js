@@ -67,7 +67,7 @@ $.get('peerreviewed.tsv', function(data) {
 			
 			// add note
 			if(columns[15] != "") {
-				html += "<br/><small>" + columns[15];
+				html += "<br/><small class='underline'>" + columns[15] + "</small>";
 			}
 			// close cell	
 			html += "</td>";
