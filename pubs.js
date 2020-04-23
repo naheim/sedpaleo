@@ -25,7 +25,7 @@ $.get('peerreviewed.tsv', function(data) {
 			html += "<tr>";
 			
 			// cell with paper count
-			html += "<td class='rownumber'>" + lineCount - i + "</td>";
+			html += "<td class='rownumber'>" + (lineCount - i) + "</td>";
 			
 			/*
 			// format citation cell if journal 
