@@ -25,7 +25,7 @@ $.get('peerreviewed.tsv', function(data) {
 		// split line into columns
 		var columns = ourrow.split("\t");
 		
-		if(columns[0] !== "type") {
+		if(columns[0] != "type") {
 			// column indices
 			// type=0; authors=1; year=2; title=3; journal=4; volume=5; issue=6; pages=7; doi=8; booktitle=9 
 			// editors=10; publisher=11; pubplace=12; url=13; notyetpub=14; note=15 ; reprint=16; 
@@ -35,7 +35,7 @@ $.get('peerreviewed.tsv', function(data) {
 			
 			// set altmetric
 			var doialtmet = "";
-			if(columns[8] !== "") {
+			if(columns[8] != "") {
 				doialtmet = " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a></small>"; // doi
 				
 				if(columns[2] > 2013) {
@@ -44,10 +44,11 @@ $.get('peerreviewed.tsv', function(data) {
 			}
 			
 			// start a table row
-			if(columns[16] !== "") {
+			if($.trim(columns[16]) != "") {
 				html += "<tr data-href=\"reprints/" + columns[16] + "\">";
 				console.log("<tr data-href=\"reprints/" + columns[16] + "\">");
 				console.log(columns[16]);			
+				console.log('d');			
 			} else {
 				html += "<tr>";
 			}
@@ -58,9 +59,9 @@ $.get('peerreviewed.tsv', function(data) {
 			// format citation cell if journal 
 			if(columns[0] == "journal") {
 				var vol = null;
-				if(columns[6] !== "") {
+				if(columns[6] != "") {
 					vol = " " + columns[5] + "(" + columns[6] + "):" + columns[7];
-				} else if(columns[14] !== ""){
+				} else if(columns[14] != ""){
 					vol = ". " + columns[14];									
 				} else {
 					vol = " " + columns[5] + ":" + columns[7];					
@@ -77,7 +78,7 @@ $.get('peerreviewed.tsv', function(data) {
 			html += doialtmet + "</small>";
 			
 			// add note
-			if(columns[15] !== "") {
+			if(columns[15] != "") {
 				html += "<br/><small>" + columns[15] + "</small>";
 			}
 			// close cell	
