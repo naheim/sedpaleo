@@ -18,7 +18,7 @@ $.get('peerreviewed.tsv', function(data) {
 		
 		if(columns[0] == "type") {
 			var colNames = columns;
-			console.log(colNames);
+			//console.log(colNames);
 			
 		} else {
 			var rowNumber = lineCount - i;
@@ -29,6 +29,8 @@ $.get('peerreviewed.tsv', function(data) {
 			html += "<td class='rownumber'>" + rowNumber + "</td>";
 			
 			// format citation cell if journal 
+			
+			console.log(colNames);
 			console.log(  jQuery.inArray( "type", colNames ) );
 			
 			if(columns[jQuery.inArray( "type", colNames )] == "journal") {
