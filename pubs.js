@@ -34,7 +34,7 @@ $.get('peerreviewed.tsv', function(data) {
 				}
 			}
 			
-			// start a table row
+			/*/ start a table row
 			if(columns[16] != "") {
 				html += "<tr onclick=\"document.location = 'reprints/" + columns[16] + "';\">";
 				console.log("<tr onclick=\"document.location = 'reprints/" + columns[16] + "';\">");
@@ -42,7 +42,7 @@ $.get('peerreviewed.tsv', function(data) {
 			} else {
 				html += "<tr>";
 			}
-			
+			*/
 			// cell with paper count
 			html += "<td class='rownumber'>" + rowNumber + "</td>";
 			
