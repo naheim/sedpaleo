@@ -30,7 +30,7 @@ $.get('peerreviewed.tsv', function(data) {
 			html += "</tr>";
 		
 			i += 1;
-			console.log(i);
+			//console.log(i);
 		}
 	})
 	// close table
