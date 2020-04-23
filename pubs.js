@@ -1,13 +1,13 @@
-$.getScript("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
 
 $('*[data-href]').on("click",function(){
-	window.location = $(this).data('href');
+	window.location = $(this).data('data-href');
 	return false;
 });
 
 
 
 $.get('peerreviewed.tsv', function(data) {
+	$.getScript("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
 
 	// start the table
 	var html = '<h2>Peer-Reviewed Publications</h2><table class="w3-table w3-striped w3-bordered w3-hoverable">';
@@ -55,7 +55,7 @@ $.get('peerreviewed.tsv', function(data) {
 				html += "<tr data-href='reprints/" + columns[16] + "'>";
 				console.log("<tr data-href='reprints/" + columns[16] + "'>");
 				console.log(columns[16]);			
-				console.log('CC');			
+				console.log('d');			
 			} else {
 				html += "<tr>";
 			}
