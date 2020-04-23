@@ -26,7 +26,7 @@ $.get('peerreviewed.tsv', function(data) {
 			
 			// start a table row
 			if(columns[8] != "") {
-				html += "<tr data-href='http://doi.org/" + columns[8] + "'>";			
+				html += "<tr class='clickable-row' data-href='http://doi.org/" + columns[8] + "'>";			
 			} else {
 				html += "<tr>";
 			}
@@ -76,4 +76,12 @@ $.get('peerreviewed.tsv', function(data) {
 
 	// insert into div
 	$('#publications').append(html);
+});
+
+
+// function for making table row a link
+jQuery(document).ready(function($) {
+    $(".clickable-row").click(function() {
+        window.location = $(this).data("href");
+    });
 });
