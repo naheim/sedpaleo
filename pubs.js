@@ -35,8 +35,8 @@ $.get('peerreviewed.tsv', function(data) {
 				}
 				html += ".<br/><small>" + columns[jQuery.inArray( "authors", colNames )] + ". " + columns[jQuery.inArray( "year", colNames )] + "."; // author and year
 				if(columns[jQuery.inArray( "doi", colNames )] != "") {
-					html += " <a href='http://doi.org/" + columns[jQuery.inArray( "doi", colNames )] + "' target='blank'>doi:" + columns[jQuery.inArray( "doi", colNames )] += "</a>."; // doi
-					html += "<div class='altmetric-embed' data-badge-type='1' data-badge-popover='right' data-doi='" + columns[jQuery.inArray( "doi", colNames )] + "' data-link-target='_blank' style='display: inline-block; vertical-align: middle;'></div>"
+					html += " <a href='http://doi.org/" + columns[jQuery.inArray( "doi", colNames )] + "' target='blank'>doi:" + columns[jQuery.inArray( "doi", colNames )] + "</a>."; // doi
+					html += "<div class='altmetric-embed' data-badge-type='1' data-badge-popover='right' data-doi='" + columns[jQuery.inArray( "doi", colNames )] + "' data-link-target='_blank' style='display: inline-block; vertical-align: middle;'></div>";
 				}	
 			}
 			
