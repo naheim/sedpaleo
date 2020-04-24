@@ -2,7 +2,7 @@ $.get('peerreviewed.tsv', function(data) {
 	$.getScript("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
 
 	// start the table
-	var html;
+	var html = "";
 	
 	// count lines in file
 	var lineCount = data.split('\n').length;
