@@ -14,10 +14,8 @@ $(document).ready(function() {
         success: function(data) {pubsTable(data, "#other-publications");}
      });
 });
-console.log("outside function!");
 
 function pubsTable(data, target) {
-	console.log("inside function");
 	$.getScript("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
 	
 	// get header
