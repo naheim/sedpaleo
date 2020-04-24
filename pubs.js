@@ -6,14 +6,28 @@ $(document).ready(function() {
         success: function(data) {pubsTable(data, "#publications");}
      });
 });
+$(document).ready(function() {
+    $.ajax({
+        type: "GET",
+        url: "other.tsv",
+        dataType: "text",
+        success: function(data) {pubsTable(data, "#other-publications");}
+     });
+});
 console.log("outside function");
 
 function pubsTable(data, taget) {
 	console.log("inside function");
 	$.getScript("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
-
+	
+	// get header
+	if(target == "#publications") {
+		var html = "<h2>Peer-Reviewed Publications</h2>";
+	} else {
+		var html = "<h2>Other Publications</h2>";	
+	}
 	// start the table
-	var html = "<h2>Peer-Reviewed Publications</h2><table class='w3-table w3-striped w3-bordered w3-hoverable'>";
+	html += "<table class='w3-table w3-striped w3-bordered w3-hoverable'>";
 	
 	// count lines in file
 	var lineCount = data.split('\n').length;
