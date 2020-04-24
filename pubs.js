@@ -16,7 +16,7 @@ $(document).ready(function() {
 });
 console.log("outside function");
 
-function pubsTable(data, taget) {
+function pubsTable(data, target) {
 	console.log("inside function");
 	$.getScript("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
 	
@@ -116,7 +116,7 @@ function pubsTable(data, taget) {
 	html += "</table>";
 
 	// insert into div
-	$(taget).append(html);
+	$(target).append(html);
 	
 	// functions for making table row a link
 	$('*[data-href]').on("click",function(){
