@@ -66,7 +66,7 @@ $.get('peerreviewed.tsv', function(data) {
 				html += ".<br/><small>" + authors + ". " + columns[2] + "."; // author and year
 					
 			} else {
-				html += "<td><strong>" + columns[3] + ".</strong> <em>In</em> " + columns[10] + ". " + columns[9] + ". " + columns[7]; // title and editors and book title
+				html += "<td><strong>" + columns[3] + ".</strong> <em>In</em> " + columns[10] + ". " + columns[9] + ":" + columns[7]; // title and editors and book title
 				html += ".<br/><small>" + authors + ". " + columns[2] + "."; // author and year
 			}
 			
