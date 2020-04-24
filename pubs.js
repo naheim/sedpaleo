@@ -44,8 +44,8 @@ $.get('peerreviewed.tsv', function(data) {
 			
 			// start a table row
 			if($.trim(columns[16]) != "") {
-				html += "<tr class='rowlink' data-href='reprints/" + columns[16] + "'>";
-				console.log("<tr class='rowlink' data-href='reprints/" + columns[16] + "'>");
+				html += "<tr data-href='reprints/" + columns[16] + "'>";
+				console.log("<tr data-href='reprints/" + columns[16] + "'>");
 				console.log('e');			
 			} else {
 				html += "<tr>";
@@ -94,12 +94,15 @@ $.get('peerreviewed.tsv', function(data) {
 
 	// insert into div
 	$('#publications').append(html);
+	
+	// functions for making table row a link
+	$('*[data-href]').on("click",function(){
+		window.location = $(this).data('href');
+		return false;
+	});
+		$("td > a").on("click",function(e){
+		e.stopPropagation();
+	});
+
 });
 
-
-// function for making table row a link
-$(".rowlink tr").on("click",function(){
-	window.location = $(this).data('data-href');
-	console.log($(this));
-	return false;
-});

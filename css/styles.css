@@ -7,4 +7,4 @@
 .rownumber {font-size: .85em;}
 
 /*FOR TABLE ROW LINK TO FILES*/
-.rowlink tr:hover {cursor: pointer;}
+*[data-href] {cursor: pointer;}
