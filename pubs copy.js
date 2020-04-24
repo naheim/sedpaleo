@@ -1,13 +1,4 @@
-$(document).ready(function() {
-    $.ajax({
-        type: "GET",
-        url: "peerreviewed.tsv",
-        dataType: "text",
-        success: function(data) {pubsTable(data, "#publications");}
-     });
-});
-
-function pubsTable(data, taget) {
+$.get('peerreviewed.tsv', function(data) {
 	$.getScript("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
 
 	// start the table
@@ -100,7 +91,7 @@ function pubsTable(data, taget) {
 	html += "</table>";
 
 	// insert into div
-	$(taget).append(html);
+	$('#publications').append(html);
 	
 	// functions for making table row a link
 	$('*[data-href]').on("click",function(){
