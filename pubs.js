@@ -12,10 +12,6 @@ $.get('peerreviewed.tsv', function(data) {
 	// split into lines
 	var rows = data.split("\n");
 	
-	// faculty 1000 icon
-		var i = 1;
-		var f1000 =	"<a href='http://f1000.com/prime/725364240?bd=1' target='_blank'><img src='http://cdn.f1000.com.s3.amazonaws.com/images/badges/badgef1000.gif' alt='Access the recommendation on F1000Prime' id='bg' style='vertical-align: middle;' /></a>";
-	
 	// parse lines
 	rows.forEach( function getvalues(ourrow) {
 		// split line into columns
@@ -41,9 +37,6 @@ $.get('peerreviewed.tsv', function(data) {
 			if(columns[8] != "") {
 				doialtmet = " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a></small>"; // doi
 				
-				if(columns[8] == "10.1126/science.1260065") {
-					doialtmet += " " + f1000;					
-				}
 				if(columns[2] > 2013) {
 					doialtmet += " <div class='altmetric-embed' data-badge-type='1' data-badge-popover='right' data-doi='" + columns[8] + "' data-link-target='_blank' style='display: inline-block; vertical-align: middle;'></div>";
 				}
