@@ -6,8 +6,10 @@ $(document).ready(function() {
         success: function(data) {pubsTable(data, "#publications");}
      });
 });
+console.log("outside function");
 
 function pubsTable(data, taget) {
+	console.log("inside function");
 	$.getScript("https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js");
 
 	// start the table
@@ -111,5 +113,5 @@ function pubsTable(data, taget) {
 		e.stopPropagation();
 	});
 
-});
+};
 
