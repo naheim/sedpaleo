@@ -14,7 +14,7 @@ $(document).ready(function() {
         success: function(data) {pubsTable(data, "#other-publications");}
      });
 });
-console.log("outside function");
+console.log("outside function!");
 
 function pubsTable(data, target) {
 	console.log("inside function");
