@@ -4,15 +4,19 @@ $.get('peerreviewed.tsv', function(data) {
 	// start the table
 	var html = '<h2>Peer-Reviewed Publications</h2><table class="w3-table w3-striped w3-bordered w3-hoverable">';
 	
-	//
+	// count lines in file
 	var lineCount = data.split('\n').length;
+	var i = 1;
 	//console.log(lineCount);
 	
 	// split into lines
 	var rows = data.split("\n");
 	
+	// faculty 1000 icon
+		var i = 1;
+		var f1000 =	"<a href='http://f1000.com/prime/725364240?bd=1' target='_blank'><img src='http://cdn.f1000.com.s3.amazonaws.com/images/badges/badgef1000.gif' alt='Access the recommendation on F1000Prime' id='bg' style='vertical-align: middle;' /></a>";
+	
 	// parse lines
-	var i = 1;
 	rows.forEach( function getvalues(ourrow) {
 		// split line into columns
 		var columns = ourrow.split("\t");
@@ -37,6 +41,9 @@ $.get('peerreviewed.tsv', function(data) {
 			if(columns[8] != "") {
 				doialtmet = " <a href='http://doi.org/" + columns[8] + "' target='blank'>doi:" + columns[8] + "</a></small>"; // doi
 				
+				if(columns[8] == "10.1126/science.1260065") {
+					doialtmet += " " + f1000;					
+				}
 				if(columns[2] > 2013) {
 					doialtmet += " <div class='altmetric-embed' data-badge-type='1' data-badge-popover='right' data-doi='" + columns[8] + "' data-link-target='_blank' style='display: inline-block; vertical-align: middle;'></div>";
 				}
@@ -44,9 +51,7 @@ $.get('peerreviewed.tsv', function(data) {
 			
 			// start a table row
 			if($.trim(columns[16]) != "") {
-				html += "<tr data-href='reprints/" + columns[16] + "'>";
-				console.log("<tr data-href='reprints/" + columns[16] + "'>");
-				console.log('FF');			
+				html += "<tr data-href='reprints/" + columns[16] + "'>";			
 			} else {
 				html += "<tr>";
 			}
