@@ -11,20 +11,8 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+
 <body id="myPage">
-
-<!-- Sidebar on click -->
-<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-azure">Close
-    <i class="fa fa-remove"></i>
-  </a>
-  <a href="#" class="w3-bar-item w3-button">Link 1</a>
-  <a href="#" class="w3-bar-item w3-button">Link 2</a>
-  <a href="#" class="w3-bar-item w3-button">Link 3</a>
-  <a href="#" class="w3-bar-item w3-button">Link 4</a>
-  <a href="#" class="w3-bar-item w3-button">Link 5</a>
-</nav>
-
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
@@ -34,17 +22,8 @@
   <a href="#teaching" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Teaching</a>
   <a href="#research" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Research</a>
   <a href="#publications" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Publications</a>
+  <a href="#gallery" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
   <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
-    <!-- Dropdown
-    <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>     
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-    </div>
-  </div>
-  -->
   <span class="w3-bar-item w3-hide-small w3-right"><img src='img/trilo.png' style='max-width:19px;max-width:19px'/></span>
  </div>
 
@@ -54,6 +33,7 @@
     <a href="#teaching" class="w3-bar-item w3-button">Teaching</a>
     <a href="#research" class="w3-bar-item w3-button">Research</a>
     <a href="#publications" class="w3-bar-item w3-button">Publications</a>
+  <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
     <a href="#contact" class="w3-bar-item w3-button">Contact</a>
   </div>
 </div>
@@ -179,9 +159,7 @@
   </div>
 </div>
 </div>
-
 </div>
-
 
 
 <!-- Reserach Row -->
@@ -236,8 +214,7 @@
 	  from historical sighting records and a few ecological variables, such as body size, geographic range, and breadth of habitat preferences.</p>
 	  This data takes advantage of citizen science data as well as museum records that have been archived with the Global Biodiversity Information Facility (GBIF).
 	</div>
-	</div>
-	
+	</div>	
 </div>
 </div>
 
@@ -250,57 +227,45 @@
 </div>
 
 
-<!-- Peer-Reviewed Publications Row -->
+<!-- Other Publications Row -->
 <div class="w3-row-padding w3-center w3-padding-64">
 	<div class="w3-container" id="other-publications">
 		
 	</div>
 </div>
 
+
 <!-- Photo Grid -->
-<div class="w3-row" style="margin-bottom:128px">
-  <div class="w3-third">
-    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-    <img src="https://www.w3schools.com/w3images/sound.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
-    <img src="https://www.w3schools.com/w3images/woods.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
-    <img src="https://www.w3schools.com/w3images/rock.jpg" style="width:100%" onclick="onClick(this)" alt="Rock">
-    <img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-    <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-  </div>
+<div class="w3-row" id="gallery">
+	<h2 class="w3-row-padding w3-center w3-padding-16">GALLERY</h2>
+	<div class="w3-third img-gallery">
+		<img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+		<img src="https://www.w3schools.com/w3images/sound.jpg" style="width:100%" onclick="onClick(this)" alt="What a beautiful scenery this sunset">
+		<img src="https://www.w3schools.com/w3images/woods.jpg" style="width:100%" onclick="onClick(this)" alt="The Beach. Me. Alone. Beautiful">
+		<img src="https://www.w3schools.com/w3images/rock.jpg" style="width:100%" onclick="onClick(this)" alt="Rock">
+		<img src="https://www.w3schools.com/w3images/nature.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+		<img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+	</div>
 
-  <div class="w3-third">
-    <img src="https://www.w3schools.com/w3images/coffee.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-    <img src="https://www.w3schools.com/w3images/bridge.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-    <img src="https://www.w3schools.com/w3images/notebook.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-    <img src="https://www.w3schools.com/w3images/london.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-    <img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-    <img src="https://www.w3schools.com/w3images/avatar_g.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-  </div>
+	<div class="w3-third img-gallery">
+		<img src="https://www.w3schools.com/w3images/coffee.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+		<img src="https://www.w3schools.com/w3images/bridge.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+		<img src="https://www.w3schools.com/w3images/notebook.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+		<img src="https://www.w3schools.com/w3images/london.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+		<img src="https://www.w3schools.com/w3images/rocks.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+		<img src="https://www.w3schools.com/w3images/avatar_g.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+	</div>
 
-  <div class="w3-third">
-    <img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-    <img src="https://www.w3schools.com/w3images/workbench.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-    <img src="https://www.w3schools.com/w3images/gondol.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-    <img src="https://www.w3schools.com/w3images/skies.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-    <img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-    <img src="https://www.w3schools.com/w3images/workshop.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
-  </div>
-</div>
-
-
-<!-- Pagination -->
-<div class="w3-center w3-padding-32">
-	<div class="w3-bar">
-		<a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
-		<a href="#" class="w3-bar-item w3-black w3-button">1</a>
-		<a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
-		<a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
-		<a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
-		<a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+	<div class="w3-third img-gallery">
+		<img src="https://www.w3schools.com/w3images/mist.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+		<img src="https://www.w3schools.com/w3images/workbench.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+		<img src="https://www.w3schools.com/w3images/gondol.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+		<img src="https://www.w3schools.com/w3images/skies.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+		<img src="https://www.w3schools.com/w3images/lights.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+		<img src="https://www.w3schools.com/w3images/workshop.jpg" style="width:100%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
 	</div>
 </div>
 
-  
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
 	<span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
@@ -309,7 +274,8 @@
 	<p id="caption"></p>
 	</div>
 </div>
-  
+
+
 <!-- Contact Container -->
 <div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
   <div class="w3-row">
@@ -353,33 +319,8 @@
   </div>
 </footer>
 
-<script>
-// Script for side navigation
-function w3_open() {
-  var x = document.getElementById("mySidebar");
-  x.style.width = "300px";
-  x.style.paddingTop = "10%";
-  x.style.display = "block";
-}
-
-// Close side navigation
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-}
-
-// Used to toggle the menu on smaller screens when clicking on the menu button
-function openNav() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-</script>
-
-<!-- Script for making tables -->
-<script type="text/javascript" src="pubs.js"></script>
+<!-- Custom scripts, including for making publications tables -->
+<script type="text/javascript" src="scripts.js"></script>
  
 </body>
 </html>

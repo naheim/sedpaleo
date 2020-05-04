@@ -8,3 +8,7 @@
 
 /*FOR TABLE ROW LINK TO FILES*/
 *[data-href] {cursor: pointer;}
+
+/*FOR GALLERY PHOTOS*/
+.img-gallery img{opacity: 0.8; cursor: pointer}
+.img-gallery img:hover{opacity: 1}

@@ -1,3 +1,35 @@
+//// Close team modals when the user clicks anywhere outside of the modal
+var bioModal1 = document.getElementById('naheimbio');
+var bioModal2 = document.getElementById('charleybio');
+window.onclick = function(event) {
+	if (event.target == bioModal1) {
+    	bioModal1.style.display = "none";
+	} else if (event.target == bioModal2) {
+    	bioModal2.style.display = "none";	
+	}
+}
+
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+	var x = document.getElementById("navDemo");
+	if (x.className.indexOf("w3-show") == -1) {
+		x.className += " w3-show";
+	} else { 
+		x.className = x.className.replace(" w3-show", "");
+	}
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// PUBLICATIONS
 $(document).ready(function() {
     $.ajax({
         type: "GET",
