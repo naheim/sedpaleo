@@ -1,7 +1,7 @@
 //// Close team modals when the user clicks anywhere outside of the modal
-var bioModal1 = document.getElementById('naheimbio');
-var bioModal2 = document.getElementById('charleybio');
 window.onclick = function(event) {
+	var bioModal1 = document.getElementById('naheimbio');
+	var bioModal2 = document.getElementById('charleybio');
 	if (event.target == bioModal1) {
     	bioModal1.style.display = "none";
 	} else if (event.target == bioModal2) {
