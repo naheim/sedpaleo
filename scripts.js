@@ -150,7 +150,7 @@ function pubsTable(data, target) {
 	
 	// functions for making table row a link
 	$('*[data-href]').on("click",function(){
-		window.open($(this).data('href'), , "_newtab");
+		window.location = $(this).data('href');
 		return false;
 	});
 		$("td > a").on("click",function(e){
