@@ -99,7 +99,7 @@ function pubsTable(data, target) {
 			
 			// start a table row
 			if($.trim(columns[16]) != "") {
-				html += "<tr data-href='reprints/" + columns[16] + "'>";			
+				html += "<tr data-href='reprints/" + columns[16] + "' target='blank'>";			
 			} else {
 				html += "<tr>";
 			}
