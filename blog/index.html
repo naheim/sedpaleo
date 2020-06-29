@@ -20,22 +20,40 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<body>
+<body id="blogPage">
 
-<!-- Sidebar (hidden by default) -->
-<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()"
-  class="w3-bar-item w3-button">Close Menu</a>
-  <a href="#food" onclick="w3_close()" class="w3-bar-item w3-button">Food</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">About</a>
-</nav>
-
-<!-- Top menu -->
+<!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
-    <div class="w3-button w3-padding-16 w3-left" onclick="w3_open()">☰</div>
-    <div class="w3-right w3-padding-16">Mail</div>
-    <div class="w3-center w3-padding-16">My Food</div>
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-azure"><i class="fa fa-home w3-margin-right"></i></a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+  <a href="#teaching" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Teaching</a>
+  <a href="#research" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Research</a>
+  <a href="#publications" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Publications</a>
+  <a href="#gallery" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Gallery</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+  <span class="w3-bar-item w3-hide-small w3-right"><img src='../img/trilo.png' style='max-width:19px;max-width:19px'/></span>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Team</a>
+    <a href="#teaching" class="w3-bar-item w3-button">Teaching</a>
+    <a href="#research" class="w3-bar-item w3-button">Research</a>
+    <a href="#publications" class="w3-bar-item w3-button">Publications</a>
+  <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
+    <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="../img/bg-masthead.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
+    <div class="w3-tag w3-round w3-azure" style="padding:5px">
+		<span class="w3-tag w3-xlarge w3-padding w3-azure w3-round w3-border w3-border-white" title="Tufts Paleobiology">Paleobiology @ Tufts</span>
+  	</div>
   </div>
 </div>
   
