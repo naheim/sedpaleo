@@ -1,4 +1,16 @@
+# Prevent Apache from serving .htaccess files:
+<FilesMatch "^\.htaccess">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
 # Remove www from any URLs that have them:
+#RewriteEngine on
+#RewriteCond %{HTTP_HOST} ^www\.
+#RewriteRule ^(.*)$ https://sedpaleo.org/$1 [R=301,L]
+
+# permanently redirect from www domain to non-www domain
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^www\.
-RewriteRule ^(.*)$ https://sedpaleo.org/$1 [R=301,L]
+Options +FollowSymLinks
+RewriteCond %{HTTP_HOST} ^www\.sedpaleo\.org$ [NC]
+RewriteRule (.*) http://sedpaleo.org/$1 [R=301,L]
