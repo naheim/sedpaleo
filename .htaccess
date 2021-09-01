@@ -4,7 +4,9 @@
     Deny from all
 </FilesMatch>
 
-# Remove www from any URLs that have them:
+# permanently redirect from www domain to non-www domain
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^www\.
-RewriteRule ^(.*)$ http://sedpaleo.org/$1 [R=301,L]
+RewriteCond %{HTTPS} on
+Options +FollowSymLinks
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://sedpaleo.org/$1 [R=301,L]
