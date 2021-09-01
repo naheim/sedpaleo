@@ -6,7 +6,5 @@
 
 # permanently redirect from www domain to non-www domain
 RewriteEngine on
-RewriteCond %{HTTPS} on
-Options +FollowSymLinks
-RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteCond %{HTTP_HOST} ^www\.
 RewriteRule ^(.*)$ http://sedpaleo.org/$1 [R=301,L]
