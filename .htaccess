@@ -1,8 +1,4 @@
-# Prevent Apache from serving .htaccess files:
-<FilesMatch "^\.htaccess">
-    Order allow,deny
-    Deny from all
-</FilesMatch>
+
 
 # permanently redirect from www domain to non-www domain
 RewriteEngine on
