@@ -1,4 +1,4 @@
 # Remove www from any URLs that have them:
 RewriteEngine on
 RewriteCond %{HTTP_HOST} ^www\.
-RewriteRule ^(.*)$ http://sedpaleo.com/$1 [R=301,L]
+RewriteRule ^(.*)$ https://sedpaleo.com/$1 [R=301,L]
