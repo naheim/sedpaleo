@@ -8,4 +8,4 @@
 RewriteEngine on
 Options +FollowSymLinks
 RewriteCond %{HTTP_HOST} ^www\.sedpaleo\.org$ [NC]
-RewriteRule (.*) http://sedpaleo.org/$1 [R=301,L]
+RewriteRule ^(.*)$ http://sedpaleo.org/$1 [R=301,L]
